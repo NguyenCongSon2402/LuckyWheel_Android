@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Company.LuckyWheel_Android.iml" filepath="$PROJECT_DIR$/.idea/modules/Company.LuckyWheel_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/LuckyWheel_Android.iml" filepath="$PROJECT_DIR$/LuckyWheel_Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LuckyWheel_Android.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.iml" filepath="$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.main.iml" filepath="$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/luckywheel/LuckyWheel_Android.luckywheel.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/luckywheel/luckywheel.iml" filepath="$PROJECT_DIR$/luckywheel/luckywheel.iml" />
     </modules>

@@ -118,25 +118,41 @@ final class WheelView extends View {
      * @param bitmap    Bitmap to draw
      */
     private void drawImage(Canvas canvas, float tempAngle, Bitmap bitmap) {
-        //get every arc img width and angle
+        // Tính chiều rộng của mỗi hình ảnh trên vòng cung
         int imgWidth = (radius / mWheelItems.size()) - mImagePadding;
+
+        // Tính góc và xác định tọa độ x, y cho vị trí vẽ hình ảnh trên vòng cung
         float angle = (float) ((tempAngle + 360 / mWheelItems.size() / 2) * Math.PI / 180);
-        //calculate x and y
-        int x = (int) (center + radius / 2 / 2 * Math.cos(angle));
-        int y = (int) (center + radius / 2 / 2 * Math.sin(angle));
-        //create arc to draw
+        int x = (int) (center + radius / 2 / 1.5 * Math.cos(angle));
+        int y = (int) (center + radius / 2 / 1.5 * Math.sin(angle));
+
+        // Tạo hình chữ nhật để xác định vùng nơi hình ảnh sẽ được vẽ
         Rect rect = new Rect(x - imgWidth / 2, y - imgWidth / 2, x + imgWidth / 2, y + imgWidth / 2);
-        //rotate main bitmap
+
+        // Xoay hình ảnh chính
         float px = rect.exactCenterX();
         float py = rect.exactCenterY();
         Matrix matrix = new Matrix();
+
+        // Dịch chuyển hình ảnh để điều chỉnh vị trí của nó
         matrix.postTranslate(-bitmap.getWidth() / 2, -bitmap.getHeight() / 2);
+        matrix.postScale(1.5f, 1.5f);
+        // Xoay hình ảnh theo góc hiện tại cộng thêm 120 độ
         matrix.postRotate(tempAngle + 120);
+
+        // Dịch chuyển hình ảnh đến vị trí cuối cùng
         matrix.postTranslate(px, py);
-        canvas.drawBitmap(bitmap, matrix, new Paint( Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG | Paint.FILTER_BITMAP_FLAG ));
-        Log.d("sadsdsddssd" , bitmap.getWidth() + " : "+bitmap.getHeight());
+
+        // Vẽ hình ảnh lên canvas với ma trận biến đổi đã được điều chỉnh
+        canvas.drawBitmap(bitmap, matrix, new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DITHER_FLAG | Paint.FILTER_BITMAP_FLAG));
+
+        // Ghi log chiều rộng và chiều cao của hình ảnh cho mục đích debug
+        Log.d("sadsdsddssd", bitmap.getWidth() + " : " + bitmap.getHeight());
+
+        // Đặt lại ma trận để sử dụng cho lần vẽ tiếp theo
         matrix.reset();
     }
+
 
 
     /**
@@ -236,7 +252,7 @@ final class WheelView extends View {
         drawWheelBackground(canvas);
         initComponents();
 
-        float tempAngle = 0;
+        float tempAngle = 45/2;
         float sweepAngle = 360 / mWheelItems.size();
 
         for (int i = 0; i < mWheelItems.size(); i++) {
